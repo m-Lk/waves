@@ -12,7 +12,7 @@ require('dotenv').config();
 
 //Setup the mongodb
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.DATABASE);
+mongoose.connect(process.env.MONGODB_URI);
 
 //register middleware
 app.use(bodyParser.urlencoded({extended: true}));
